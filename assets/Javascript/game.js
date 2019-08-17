@@ -19,3 +19,4 @@ const fighters = {
         attack = 15,
     }
 }
+.fighter.onclick()
