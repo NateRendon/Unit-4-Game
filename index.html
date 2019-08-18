@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <header>CardFight! Vanguard!</header>
-    <style href = assets/css/style.css></style>
+    <title>Crystal Collector Game</title>
+    <link rel ="stylesheet" href ="assets/css/style.css">
 </head>
 <body>
-    <h1>Lets Cardfight!!</h1>
-    <div class = "interface">
-        <div class = "col-md-3 fighter" >
-            <img src="assets/Images/Alfredking.jpeg">
-            <div class = "card">King of Knights, Alfred</div>
-            <p>Glorious King that watches over the United Sanctuary</p>
-        </div>
-        <div class = "col-md-3 fighter">
-            <img src="assets/Images/dragonic.jpeg">
-            <div class = "card">Dragonnic Overlord</div>
-            <p>Great Dragon of the Dragon Empire. Decimates all who stand in it's path with furious flames!</p>
-        </div>
-        <div class = "col-md-3 fighter">
-            <img src="assets/Images/lion.jpeg">
-            <div class = "card">Incandescent Lion Blode Ezel</div>
-            <p>Virtious leader of the Gold Paladins. Earns victory swiftly and efficiently.</p>
-        </div>
-        <div class = "col-md-3 fighter">
-            <img src="assets/Images/pentagon.jpeg">
-            <div class = "card">Pentagonal Magus</div>
-            <p></p>
-        </div>
-        <div>
-            <div class = "col-md-3" id = "chosen fighter"></div>
-            <div class = "col-md-4" id = "attack button div"></div>
-            <div class = "col-md-3" id = "enemy fighter"></div>
-         </div>
-   
-    <script href = assets/Javascript/game.js></script>
+    <div class = "gamename">Crystal Collector!</div>
+    <div class = "rules">
+        <p>The objective of the game is to match your score with the randomly generated one!</p>
+        <p>There are four crystals below that will always change values at the beginning of each round.</p>
+        <p>However each value is hidden so youll need to watch your own score to figure out what each value is.</p>
+        <p>Good luck and have fun!</p>
+    </div>
+    <div id="obj">
+    <div class = "objective"></div>
+    <div class ="scoreboard"></div>
+    </div>
+    <div id="crystals">
+    <div id = "red">
+        <img src="assets/css/images/red.jpeg">
+    </div>
+    <div id = "blue">
+            <img src="assets/css/images/blue.jpeg">
+    </div>
+    <div id = "purple" >
+            <img src="assets/css/images/purple.jpeg">
+    </div>
+    <div id = "green">
+            <img src="assets/css/images/green.jpeg">
+    </div>
+    </div>
+    <div class = "block"></div>
+    <div class = "yourscore"></div>
+    <link href = "assets/Javascript/game.js">
 </body>
-</html>

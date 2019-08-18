@@ -1,22 +1,11 @@
-const fighters = {
-    Alfred = {
-        hp = 120,
-        attack = 20,
-    },
+let randNum = Math.floor((Math.random() * 12) + 1);
 
-    DragonicOverlord = {
-        hp = 150,
-        attack = 18, 
-    },
+let docCrystals = document.getElementById('red');
+let docCrystals = document.getElementById('blue');
+let docCrystals = document.getElementById('green');
+let docCrystals = document.getElementById('purple');
 
-    BlondeEzel = {
-        hp = 100,
-        attack = 25,
-    },
 
-    PentagonalMagus = {
-        hp = 180,
-        attack = 15,
-    }
-}
-.fighter.onclick()
+document.addEventListener('click', (event) => {
+
+});

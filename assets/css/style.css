@@ -1,0 +1,70 @@
+body {
+    background-image: url("images/cave.jpeg")
+
+}
+
+.gamename {
+    width: 560px;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.rules{
+    height: 400px;
+    width: 600px;
+}
+
+p {
+    color: aliceblue;
+    font-size: 25px;
+}
+
+#obj {
+    height: 300px;
+    width: 600px;
+    border: solid green;
+}
+
+.scoreboard {
+    height: 300px;
+    width: 400px;
+    border: solid red;
+    float: left;
+}
+
+.objective {
+    height: 200px;
+    width: 180px;
+    border: solid blue;
+    float: right;
+
+}
+
+#crystals {
+    height: 300px;
+    width: 600px;
+}
+
+#red {
+    height: 100px;
+    width: 150px;
+    float: left;
+}
+
+#blue {
+    height: 100px;
+    width: 150px;
+    float: left;
+}
+
+#purple{
+    height: 100px;
+    width: 150px;
+    float: left;
+}
+
+#green {
+    height: 100px;
+    width: 150px;
+    float: left;
+}
