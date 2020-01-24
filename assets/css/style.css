@@ -6,7 +6,7 @@ body {
 .gamename {
     width: 560px;
     font-size: 25px;
-    color: yellow;
+    color: red;
 }
 
 .rules{
@@ -22,14 +22,18 @@ p {
 #row {
     height: 310px;
     width: 600px;
-    color: yellow;
+    color: red;
 }
 
 .scoreboard {
     height: 300px;
     width: 400px;
-    color: yellow;
+    color: red;
     float: left;
+}
+
+#numberToGuess {
+    color: red;
 }
 
 .objective {
