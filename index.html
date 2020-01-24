@@ -1,20 +1,67 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Crystal Collector Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel ="stylesheet" href ="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+
 </head>
 <body>
-    <div class = "gamename">Crystal Collector!</div>
-    <div class = "rules">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <h1 class="card-header text-center" id="message">Crystal Skull Collector</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "card-header">
         <p>The objective of the game is to match your score with the randomly generated one!</p>
         <p>There are four crystals below that will always change values at the beginning of each round.</p>
-        <p>However each value is hidden so youll need to watch your own score to figure out what each value is.</p>
+        <p>However each value is hidden so you'll need to watch your own score to figure out what each value is.</p>
         <p>Good luck and have fun!</p>
     </div>
-        <div id="obj">
-            <div class = "objective"></div>
-            <div class ="scoreboard"></div>
+    <h3 class="card-body">
+        <div class="text-center" id="numberToGuess"></div>
+    </h3>
+        <div id="row">
+            <div class = "objective">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <h4 class="card-header text-center">Total Score</h4>
+                            <div class="card-body">
+                                <h3 class="text-center" id="totalScore"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <h4 class="card-header text-center">Wins</h4>
+                            <div class="card-body">
+                                <h3 class="text-center" id="totalWins"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <h4 class="card-header text-center">Losses</h4>
+                            <div class="card-body">
+                                <h3 class="text-center" id="totalLosses"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     <div id="crystals">
         <div id = "red">
             <img src="assets/css/images/red.jpeg">
@@ -29,7 +76,6 @@
             <img src="assets/css/images/green.jpeg">
     </div>
     </div>
-    <div class = "block"></div>
-    <div class = "yourscore"></div>
-    <link href = "assets/Javascript/game.js">
 </body>
+    <script type="text/Javascript" src = "assets/Javascript/game.js"></script>
+</html>

@@ -1,94 +1,68 @@
-$ (document).ready(function() {
+$(document).ready(function () {
 
-    let randomNumber = Math.floor(Math.random() * 135 + 15)
-    console.log(randomNumber);
+    let numberToGuess = 0;
+    let totalScore = 0;
+    let totalWins = 0;
+    let totalLosses = 0;
+    let crystal1Value = 0;
+    let crystal2Value = 0;
+    let crystal3Value = 0;
+    let crystal4Value = 0;
 
-    $('#goal').text(randomNumber);
+    resetGame();
 
-    let num1 = Math.floor(Math.random() * 15)
-    let num2 = Math.floor(Math.random() * 15)
-    let num3 = Math.floor(Math.random() * 15)
-    let num4 = Math.floor(Math.random() * 15)
 
-    let wins = 0;
-    let losses = 0;
-    let score = 0;
+    function resetGame() {
+        //Choose random number from 19-120
+        numberToGuess = Math.floor(Math.random() * (121 - 19) ) + 19;
+        $('#numberToGuess').text(numberToGuess);
 
-    $('#wins').text(wins);
-    $('#losses').text(losses);
+        //Total Scores
+        totalScore = 0;
+        $('#totalScore').text(totalScore);
+        $('#totalWins').text(totalWins);
+        $('#totalLosses').text(totalLosses);
 
-    function reset() {
-        const randomNumber = Math.floor(Math.random() * 135 + 15)
-        console.log(randomNumber);
-        $('#goal').text(randomNumber);
-        num1 = Math.floor(Math.random() * 15);
-        num2 = Math.floor(Math.random() * 15);
-        num3 = Math.floor(Math.random() * 15);
-        num4 = Math.floor(Math.random() * 15);
-        score = 0;
-        $('#playerScore').text(score);
+        //Choose random number from 1-12
+        crystal1Value = Math.ceil(Math.random() * 12);
+        crystal2Value = Math.ceil(Math.random() * 12);
+        crystal3Value = Math.ceil(Math.random() * 12);
+        crystal4Value = Math.ceil(Math.random() * 12);
     }
 
-    function winning(){
-        alert('..you have won..');
-        wins++;
-        $("#wins").text(wins);
-        reset()
+    function calculateNewScore(crystalValue) {
+        totalScore += crystalValue;
+        $('#totalScore').text(totalScore);
+        compareToNumber();
     }
 
-    function loosing(){
-        alert('..you have lost..');
-        losses++
-        $("#losses").text(losses)
-        reset()
-    }
+    function compareToNumber() {
+        if (numberToGuess - totalScore == 0) {
+            totalWins++;
+            $('#message').text("Congratulations! You Win!");
+            resetGame();
+        }
+        else if (numberToGuess - totalScore < 0) {
+            totalLosses++;
+            $('#message').text(`Game Over. Your score of ${totalScore} did not match ${numberToGuess}`);
+            resetGame();
+        }
+    };
 
-    $(".red").on('click', function(){
-        score = score + num1;
-        console.log("player score = " + score);
-        $("#playerScore").text(score);
-
-            if (score == randomNumber){
-                winning();
-            } else if (score > randomNumber){
-                loosing();
-            }
-
+    $('#red').on("click", function(){
+        calculateNewScore(crystal1Value);
     });
 
-    $(".blue").on('click', function(){
-        score = score + num2;
-        console.log("player score = " + score);
-        $("#playerScore").text(score);
+    $('#blue').on("click", function(){
+        calculateNewScore(crystal2Value);
+    });
 
-            if (score == randomNumber){
-                winning();
-            } else if (score > randomNumber){
-                loosing();
-            }
-    })
+    $('#purple').on("click", function(){
+        calculateNewScore(crystal3Value);
+    });
 
-    $(".purple").on("click", function(){
-        score = score + num3;
-        console.log("player score = " + score);
-        $("#playerScore").text(score);
-            
-            if (score == randomNumber){
-                winning();
-            } else if (score > randomNumber){
-                loosing();
-            }
-    })
+    $('#green').on("click", function(){
+        calculateNewScore(crystal4Value);
+    });
 
-    $(".green").on("click", function(){
-        score = score + num4;
-        console.log("player score = " + score);
-        $("#playerScore").text(score);
-
-            if (score == randomNumber){
-                winning();
-            } else if (score > randomNumber){
-                loosing();
-            }
-    })
-})
+});

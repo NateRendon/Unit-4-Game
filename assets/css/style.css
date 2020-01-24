@@ -6,7 +6,7 @@ body {
 .gamename {
     width: 560px;
     font-size: 25px;
-    color: aliceblue;
+    color: yellow;
 }
 
 .rules{
@@ -15,27 +15,30 @@ body {
 }
 
 p {
-    color: aliceblue;
+    color: yellow;
     font-size: 25px;
 }
 
-#obj {
+#row {
     height: 310px;
     width: 600px;
+    color: yellow;
 }
 
 .scoreboard {
     height: 300px;
     width: 400px;
-    color: aliceblue;
+    color: yellow;
     float: left;
 }
 
 .objective {
     height: 200px;
-    width: 180px;
-    color: aliceblue;
+    width: 280px;
+    color: red;
     float: right;
+    font-size: 20px;
+
 
 }
 
