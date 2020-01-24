@@ -1,14 +1,94 @@
-let randNum = Math.floor((Math.random() * 12) + 1);
-let chosenCrystal = crystal[randNum];
-let obj = [];
+$ (document).ready(function() {
 
-let docCrystals = document.getElementById('objective');
-let docCrystals = document.getElementById('red');
-let docCrystals = document.getElementById('blue');
-let docCrystals = document.getElementById('green');
-let docCrystals = document.getElementById('purple');
+    let randomNumber = Math.floor(Math.random() * 135 + 15)
+    console.log(randomNumber);
 
+    $('#goal').text(randomNumber);
 
-document.addEventListener('click', (event) => {
-    let 
-});
+    let num1 = Math.floor(Math.random() * 15)
+    let num2 = Math.floor(Math.random() * 15)
+    let num3 = Math.floor(Math.random() * 15)
+    let num4 = Math.floor(Math.random() * 15)
+
+    let wins = 0;
+    let losses = 0;
+    let score = 0;
+
+    $('#wins').text(wins);
+    $('#losses').text(losses);
+
+    function reset() {
+        const randomNumber = Math.floor(Math.random() * 135 + 15)
+        console.log(randomNumber);
+        $('#goal').text(randomNumber);
+        num1 = Math.floor(Math.random() * 15);
+        num2 = Math.floor(Math.random() * 15);
+        num3 = Math.floor(Math.random() * 15);
+        num4 = Math.floor(Math.random() * 15);
+        score = 0;
+        $('#playerScore').text(score);
+    }
+
+    function winning(){
+        alert('..you have won..');
+        wins++;
+        $("#wins").text(wins);
+        reset()
+    }
+
+    function loosing(){
+        alert('..you have lost..');
+        losses++
+        $("#losses").text(losses)
+        reset()
+    }
+
+    $(".red").on('click', function(){
+        score = score + num1;
+        console.log("player score = " + score);
+        $("#playerScore").text(score);
+
+            if (score == randomNumber){
+                winning();
+            } else if (score > randomNumber){
+                loosing();
+            }
+
+    });
+
+    $(".blue").on('click', function(){
+        score = score + num2;
+        console.log("player score = " + score);
+        $("#playerScore").text(score);
+
+            if (score == randomNumber){
+                winning();
+            } else if (score > randomNumber){
+                loosing();
+            }
+    })
+
+    $(".purple").on("click", function(){
+        score = score + num3;
+        console.log("player score = " + score);
+        $("#playerScore").text(score);
+            
+            if (score == randomNumber){
+                winning();
+            } else if (score > randomNumber){
+                loosing();
+            }
+    })
+
+    $(".green").on("click", function(){
+        score = score + num4;
+        console.log("player score = " + score);
+        $("#playerScore").text(score);
+
+            if (score == randomNumber){
+                winning();
+            } else if (score > randomNumber){
+                loosing();
+            }
+    })
+})

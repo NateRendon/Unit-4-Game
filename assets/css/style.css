@@ -22,20 +22,19 @@ p {
 #obj {
     height: 310px;
     width: 600px;
-    border: solid green;
 }
 
 .scoreboard {
     height: 300px;
     width: 400px;
-    border: solid red;
+    color: aliceblue;
     float: left;
 }
 
 .objective {
     height: 200px;
     width: 180px;
-    border: solid blue;
+    color: aliceblue;
     float: right;
 
 }
